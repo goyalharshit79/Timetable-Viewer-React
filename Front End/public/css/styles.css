@@ -1,0 +1,96 @@
+body {
+  background-color: #343a40;
+  margin: 0;
+}
+label {
+  color: white;
+}
+h1 {
+  color: white;
+  text-align: center;
+  margin-top: 10vh;
+}
+#signup {
+  margin-bottom: 9vh;
+}
+#login {
+  margin-bottom: 16vh;
+}
+h2 {
+  margin-top: 15vh;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.day:hover {
+  cursor: pointer;
+}
+.text-muted > a {
+  color: white;
+  text-decoration: none;
+}
+.footer {
+  background-color: transparent;
+}
+.days {
+  width: fit-content;
+  height: 50px;
+  background-color: antiquewhite;
+  margin-top: 50px;
+  border-radius: 20%;
+}
+.container-fluid {
+  font-family: rajdhani;
+}
+.login {
+  width: 80%;
+  padding: 10px;
+  border-radius: 2rem;
+}
+.signup {
+  width: 50%;
+}
+.btn-secondary {
+  background-color: #fff;
+  color: black;
+  align-items: center;
+  border: 0;
+}
+
+.left-side {
+  border-right: solid;
+  border-color: azure;
+  padding-right: 5%;
+}
+.right-side {
+  padding-right: 20%;
+  padding-left: 5%;
+}
+
+.days-container {
+  margin-left: 10vw;
+  margin-top: 20vh;
+  margin-right: 0;
+  box-shadow: inset;
+}
+.card {
+  padding: 10px;
+  margin: 30px;
+  text-align: center;
+  border: solid 2px;
+  border-radius: 30px;
+  border-color: #fff;
+  background-color: transparent;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+  font-size: 30px;
+  padding: 30px;
+  color: #fff;
+}
+.home-btn {
+  background: none;
+  border: 0;
+}
+.home-btn:focus {
+  outline: 0;
+}
