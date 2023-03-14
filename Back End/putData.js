@@ -121,7 +121,7 @@ module.exports.putData = () => {
           "UBBA",
           "UBBA",
           "UAWR-400",
-          "INTERNET",
+          "INTERNET ",
         ],
         saturday: ["UGEN-401", "Free", "Free", "Free", "Free", "Free"],
         before: ["Class", "Class", "Class", "Class", "Class", "Class"],
