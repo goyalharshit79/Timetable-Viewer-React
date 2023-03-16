@@ -39,7 +39,7 @@ function Days(props) {
         <div className="row">
           {days.map((day) => {
             return (
-              <div className="col-sm-3 card">
+              <div className="col-sm-3 card ">
                 <span
                   className="day"
                   onClick={() => {
