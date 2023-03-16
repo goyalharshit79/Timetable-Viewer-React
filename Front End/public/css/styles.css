@@ -98,3 +98,7 @@ h2 {
 .row {
   margin: 0;
 }
+.wrong {
+  border-width: 2px;
+  border-color: red;
+}

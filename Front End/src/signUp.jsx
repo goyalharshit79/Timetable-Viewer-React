@@ -4,6 +4,8 @@ function SignUp(props) {
   function invalid() {
     document.getElementById("confirmPassword").value = "";
     document.getElementById("password").value = "";
+    document.getElementById("confirmPassword").classList.add("wrong");
+    document.getElementById("password").classList.add("wrong");
   }
   function handleSignUp(event) {
     const adress = "http://localhost:8000";
@@ -25,8 +27,8 @@ function SignUp(props) {
       .then((response) => response.json())
       .then((data) => {
         if (data.msg === "902") {
-          alert("Passwords don't match");
           invalid();
+          alert("Passwords don't match");
         } else if (data.msg === "901") {
           props.signedUp();
         }
