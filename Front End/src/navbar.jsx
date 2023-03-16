@@ -10,11 +10,11 @@ function NavBar(props) {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     const reqPayload = {
-      day: data.get("daySearched"),
+      subject: data.get("daySearched"),
       class: props.userLoggedIn.class,
     };
 
-    fetch(address + "/timetable", {
+    fetch(address + "/subject", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(reqPayload),
@@ -23,7 +23,8 @@ function NavBar(props) {
       .then((response) => response.json())
       .then((data) => {
         if (data) {
-          props.timetable(data.timetable);
+          console.log(data);
+          props.timetable(data.data);
           document.getElementById("daySearched").value = "";
         }
       })

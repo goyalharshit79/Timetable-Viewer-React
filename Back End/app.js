@@ -110,6 +110,58 @@ app.post("/retain-session", (req, res) => {
     });
   }
 });
+app.post("/subject", (req, res) => {
+  console.log(req.body);
+  let schedule = [];
+  ClassTimetable.find({ class: req.body.class }, (err, timetableFound) => {
+    var subjectSearched = _.upperCase(req.body.subject);
+    subjectSearched = subjectSearched.split(" ");
+    subjectSearched = subjectSearched[0] + "-" + subjectSearched[1];
+    let i = 0;
+    timetableFound[0].monday.forEach((period) => {
+      if (period === subjectSearched) {
+        schedule.push("Monday " + "Period: " + (i + 1));
+      }
+      i++;
+    });
+    i = 0;
+    timetableFound[0].tuesday.forEach((period) => {
+      if (period === subjectSearched) {
+        schedule.push("Tuesday " + "Period: " + (i + 1));
+      }
+      i++;
+    });
+    i = 0;
+    timetableFound[0].wednesday.forEach((period) => {
+      if (period === subjectSearched) {
+        schedule.push("Wednesday " + "Period: " + (i + 1));
+      }
+      i++;
+    });
+    i = 0;
+    timetableFound[0].thursday.forEach((period) => {
+      if (period === subjectSearched) {
+        schedule.push("Thursday " + "Period: " + (i + 1));
+      }
+      i++;
+    });
+    i = 0;
+    timetableFound[0].friday.forEach((period) => {
+      if (period === subjectSearched) {
+        schedule.push("Friday " + "Period: " + (i + 1));
+      }
+      i++;
+    });
+    i = 0;
+    timetableFound[0].saturday.forEach((period) => {
+      if (period === subjectSearched) {
+        schedule.push("Saturday " + "Period: " + (i + 1));
+      }
+      i++;
+    });
+    res.send({ msg: "900", data: schedule });
+  });
+});
 
 app.post("/signup", (req, res) => {
   if (req.body.password === req.body.confirmPassword) {
